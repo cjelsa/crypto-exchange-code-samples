@@ -21,6 +21,7 @@ from datetime import datetime, timedelta
 
 # installed
 import websockets
+import config
 
 
 class main:
@@ -35,8 +36,8 @@ class main:
 
         # Instance Variables
         self.ws_connection_url: str = ws_connection_url
-        self.client_id: str = client_id
-        self.client_secret: str = client_secret
+        self.client_id: str = config.client_ID
+        self.client_secret: str = config.client_secret
         self.websocket_client: websockets.WebSocketClientProtocol = None
         self.refresh_token: str = None
         self.refresh_token_expiry_time: int = None
